@@ -2,7 +2,6 @@ import numpy as np
 import pickle
 import pandas as pd
 import streamlit as st
-import pipreqs
 
 #loading save model
 loaded_model = pickle.load(open('trained_model.pkl', 'rb'))
