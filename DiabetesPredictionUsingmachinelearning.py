@@ -23,6 +23,20 @@ X = diabetes_dataset.drop(columns = 'Outcome', axis=1)
 Y = diabetes_dataset['Outcome']
 print(X)
 print(Y)
+#Data Visuaization
+import matplotlib as plt
+diabetes_dataset.hist(figsize=(20,20))
+#Correlation of dataset
+diabetes_dataset.corr()
+#SNS pair plot
+import seaborn as sns
+sns.pairplot(diabetes_dataset,diag_kind='kde');
+df_t = diabetes_dataset
+df_t['Outcome'].astype('category')
+df_t['Outcome'].replace(0,"non-diabetic",inplace=True)
+df_t['Outcome'].replace(1,"diabetic",inplace=True)
+
+sns.pairplot(df_t,hue='Outcome',diag_kind='kde');
 #Train Test Split
 X_train, X_test, Y_train, Y_test = train_test_split(X,Y, test_size = 0.2, stratify=Y, random_state=2)
 print(X.shape, X_train.shape, X_test.shape)
