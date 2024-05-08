@@ -1,1 +1,3 @@
-https://github.com/NismaK/Diabetes_Prediction_using_machine_learning
+<H1>Diabetes Prediction Using Machine Learning</H1>
+Preview of the project
+
